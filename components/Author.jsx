@@ -2,8 +2,8 @@ import React from 'react'
 
 const Author = ({ author }) => {
   return (
-    <div className="text-center mt-20 mb-8 p-12 relative bg-white">
-      <div className="absolute flex justify-center left-0 right-0 -top-14">
+    <div className="text-center mb-8 p-12 relative bg-white">
+      <div className="flex justify-center">
         <img 
           src={author.photo.url}
           alt={author.name}
