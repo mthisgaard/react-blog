@@ -6,9 +6,11 @@ import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <div className="bg-neutral-200 h-full py-12">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
   )
 }
 

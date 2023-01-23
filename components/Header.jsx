@@ -12,22 +12,24 @@ const Header = () => {
   
   return (
     <div className="container mx-auto px-10 mb-8">
-      <div className="border-b w-full inline-block border-gray-200 py-8">
+      <div className="border-b w-full flex items-center justify-between border-gray-300 py-8">
         <div className="md:float-left block">
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl text-white drop-shadow-2xl">
+            <span className="title cursor-pointer font-bold text-6xl drop-shadow-2xl">
               Japan Blog
             </span>
           </Link>
         </div>
-        <div className="hidden md:float-left md:contents">
-          {categories.map((category) => (
-            <Link key={category.slug} href={`/category/${category.slug}`}>
-              <span className="md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer drop-shadow-2xl">
-                {category.name}
-              </span>
-            </Link>
-          ))}
+        <div>
+          <div className="hidden md:float-left md:contents">
+            {categories.map((category) => (
+              <Link key={category.slug} href={`/category/${category.slug}`}>
+                <span className="md:float-right mt-2 ml-4 align-middle duration-500 bg-white rounded-lg opacity-70 hover:opacity-100 transform hover:-translate-y-1 inline-block border border-2 rounded text-lg font-medium px-8 py-3 cursor-pointer">
+                  {category.name}
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>
